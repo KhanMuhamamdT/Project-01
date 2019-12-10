@@ -29,7 +29,50 @@ var capital_quiz = [
             "option3": "Stockholm",
             "option4": "Copenhagen",
             "match": "A",
-      }
+   
+      },
+     
+            {
+                  "country_id": "Spain",
+                  "option1": "Madrid",
+                  "option2": "Barcelona",
+                  "option3": "Pamplona",
+                  "option4": " Lisbon",
+                  "match": "A",
+     
+                  
+      },
+
+
+      {
+            "country_id": "Chile",
+            "option1": "La Paz",
+            "option2": "Santiago",
+            "option3": "Buenos Aires",
+            "option4": "Sao Paulo",
+            "match": "A",
+
+            
+},
+
+
+
+
+{
+      "country_id": "Colombia",
+      "option1": "Lima",
+      "option2": "Bogota",
+      "option3": "Rio Di Janeiro",
+      "option4": "Santiago",
+      "match": "A",
+
+      
+},
+
+
+
+
+
 
 ]
 
@@ -40,8 +83,8 @@ var newdiv
 var newcontent
 var element
 var radio
-var lbl
-var labtxt
+var div_lbl
+var div_txt
 var radioname
 var input_value
 var option
@@ -57,17 +100,25 @@ function create_optionbutton(radioname) {
       radio_btn = document.createElement("INPUT")
       radio_btn.setAttribute("type", "radio")
       radio_btn.setAttribute("name", radioname)
+      radio_btn.setAttribute("city", "1111111111")
+      radio_btn.setAttribute("Class", "rad")
+      
       element.appendChild(radio_btn)
 
 }
 
 
 
-function ceate_lbl(element, option) {
-      lbl = document.createElement("LABEL")
-      lbltxt = document.createTextNode(option)
-      //lbl.setAttribute("for", "male")
-      element.appendChild(lbltxt)
+function create_divlbl(element, option) {
+//      var lbl = document.createElement("LABEL")
+//     var  lbltxt = document.createTextNode(option)
+//        element.appendChild(lbltxt)
+      div_lbl = document.createElement("div")
+      div_txt = document.createTextNode(option)
+      div_lbl.appendChild(div_txt)
+      element.appendChild(div_lbl)
+
+
 
 }
 
@@ -78,33 +129,35 @@ for (let i = 0; i < capital_quiz.length; ++i) {
 
       radioname = capital_quiz[i].country_id
       //  Question 
-      newdiv = document.createElement("div")
+      newdiv = document.createElement("p")
+      newdiv.setAttribute("align-content","center")
       newcontent = document.createTextNode('What is the captal of ' + capital_quiz[i].country_id + '?')
+      
       newdiv.appendChild(newcontent)
       element.appendChild(newdiv)
-
+      
 
       //option 1
       brek_line(element)
       create_optionbutton(radioname)
-      ceate_lbl(element, capital_quiz[i].option1)
+      create_divlbl(element, capital_quiz[i].option1)
 
 
       //  Option 2
       brek_line(element)
       create_optionbutton(radioname)
-      ceate_lbl(element, capital_quiz[i].option2)
+      create_divlbl(element, capital_quiz[i].option2)
 
       // option 3    
 
       brek_line(element)
       create_optionbutton(radioname)
-      ceate_lbl(element, capital_quiz[i].option3)
+      create_divlbl(element, capital_quiz[i].option3)
 
       //option 4
       brek_line(element)
       create_optionbutton(radioname)
-      ceate_lbl(element, capital_quiz[i].option4)
+      create_divlbl(element, capital_quiz[i].option4)
       brek_line(element)
 
 }
