@@ -10,7 +10,7 @@ var capitalQuiz = [
             "option2": "Frankfurt",
             "option3": "Berlin",
             "option4": "Stuttgart",
-            "match": "Munich",
+            "match": "Berlin",
       },
 
       {
@@ -19,55 +19,55 @@ var capitalQuiz = [
             "option2": "Oslo",
             "option3": "Helsinki",
             "option4": "Stockholm",
-            "match": "Helsinki",
+            "match": "Oslo",
       }
 
-//       {
-//             "country_id": "Denmark",
-//             "option1": "Oslo",
-//             "option2": "Helsinki",
-//             "option3": "Stockholm",
-//             "option4": "Copenhagen",
-//             "match": "Stockholm",
-   
-//       },
-     
-//             {
-//                   "country_id": "Spain",
-//                   "option1": "Madrid",
-//                   "option2": "Barcelona",
-//                   "option3": "Pamplona",
-//                   "option4": " Lisbon",
-//                   "match": "Madrid",
-     
-                  
-//       },
+      //       {
+      //             "country_id": "Denmark",
+      //             "option1": "Oslo",
+      //             "option2": "Helsinki",
+      //             "option3": "Stockholm",
+      //             "option4": "Copenhagen",
+      //             "match": "Stockholm",
+
+      //       },
+
+      //             {
+      //                   "country_id": "Spain",
+      //                   "option1": "Madrid",
+      //                   "option2": "Barcelona",
+      //                   "option3": "Pamplona",
+      //                   "option4": " Lisbon",
+      //                   "match": "Madrid",
 
 
-//       {
-//             "country_id": "Chile",
-//             "option1": "La Paz",
-//             "option2": "Santiago",
-//             "option3": "Buenos Aires",
-//             "option4": "Sao Paulo",
-//             "match": "Santiago",
-
-            
-// },
+      //       },
 
 
+      //       {
+      //             "country_id": "Chile",
+      //             "option1": "La Paz",
+      //             "option2": "Santiago",
+      //             "option3": "Buenos Aires",
+      //             "option4": "Sao Paulo",
+      //             "match": "Santiago",
 
 
-// {
-//       "country_id": "Colombia",
-//       "option1": "Lima",
-//       "option2": "Bogota",
-//       "option3": "Rio Di Janeiro",
-//       "option4": "Santiago",
-//       "match": "Bogota",
+      // },
 
-      
-// },
+
+
+
+      // {
+      //       "country_id": "Colombia",
+      //       "option1": "Lima",
+      //       "option2": "Bogota",
+      //       "option3": "Rio Di Janeiro",
+      //       "option4": "Santiago",
+      //       "match": "Bogota",
+
+
+      // },
 
 
 
@@ -96,15 +96,15 @@ function breakLine(element) {
       element.appendChild(br)
 }
 
-function createOptionButton(radioName,optionCity) {
+function createOptionButton(radioName, optionCity) {
 
       radio_btn = document.createElement("INPUT")
       radio_btn.setAttribute("type", "radio")
       radio_btn.setAttribute("name", radioName)
-      
-      radio_btn.setAttribute("city",  optionCity)
+
+      radio_btn.setAttribute("city", optionCity)
       radio_btn.setAttribute("Class", "rad")
-      
+
       element.appendChild(radio_btn)
 
 }
@@ -125,37 +125,38 @@ for (let i = 0; i < capitalQuiz.length; ++i) {
       breakLine(element)
 
       radioName = capitalQuiz[i].country_id
-      optionCity=capitalQuiz[i].option1
+      optionCity = capitalQuiz[i].option1
       //  Question 
       newDiv = document.createElement("p")
-      newDiv.setAttribute("align-content","center")
+      newDiv.setAttribute("align-content", "center")
+      newDiv.setAttribute("id", capitalQuiz[i].country_id + 'p')
       newcontent = document.createTextNode('What is the captal of ' + capitalQuiz[i].country_id + '?')
-      
+
       newDiv.appendChild(newcontent)
       element.appendChild(newDiv)
-      
-           //option 1
+
+      //option 1
       breakLine(element)
-      
-      console.log(radioName + ' '+ optionCity )
-      createOptionButton(radioName,optionCity)
+
+      console.log(radioName + ' ' + optionCity)
+      createOptionButton(radioName, optionCity)
       createDivLabel(element, capitalQuiz[i].option1)
 
 
       //  Option 2
       breakLine(element)
-      createOptionButton(radioName,capitalQuiz[i].option2)
+      createOptionButton(radioName, capitalQuiz[i].option2)
       createDivLabel(element, capitalQuiz[i].option2)
 
       // option 3    
 
       breakLine(element)
-      createOptionButton(radioName,capitalQuiz[i].option3)
+      createOptionButton(radioName, capitalQuiz[i].option3)
       createDivLabel(element, capitalQuiz[i].option3)
 
       //option 4
       breakLine(element)
-      createOptionButton(radioName,capitalQuiz[i].option4)
+      createOptionButton(radioName, capitalQuiz[i].option4)
       createDivLabel(element, capitalQuiz[i].option4)
       breakLine(element)
 
@@ -172,43 +173,44 @@ let buttonClick = document.getElementById("button")
 
 buttonClick.addEventListener('click', calculateResult)
 
-function calculateResult ()
+function calculateResult() {
 
-{
 
-  //let sel =   document.getElementsByName("Germany");
-//console.log(sel)
+      for (let i = 0; i < capitalQuiz.length; ++i) {
+            console.log('Loop Iteration ')
+            let sel = document.getElementsByName(capitalQuiz[i].country_id)
+            console.log(sel)
+            let selinput = capitalQuiz[i].match
+            let country = capitalQuiz[i].country_id + 'p'
 
-for (let i = 0;  i < capitalQuiz.length; ++i) {
-      console.log('Loop Iteration ')
- let sel =   document.getElementsByName(capitalQuiz[i].country_id)
-//console.log(sel)
-let selinput= capitalQuiz[i].match
-for (let i =0 ;i< 4; i++)
-{
-
-      
-
-if (sel[i].checked){
-
-    
-     let selmatch= sel[i].getAttribute("city")
-
-     if (selinput == selmatch){
-           console.log ('match found')
-     }
-     else{
-           console.log(' match not found')
-     }
-}
-     
-// else{
-
-// console.log( 'option not selected')
-// }
+            for (let i = 0; i < 4; i++) {
 
 
 
-}
-}
+                  if (sel[i].checked) {
+
+
+                        let selmatch = sel[i].getAttribute("city")
+                        console.log('MK ' + selmatch)
+
+                        if (selinput == selmatch) {
+                              console.log('match found')
+                              document.getElementById(country).style.color = "green"
+                        }
+                        else {
+                              console.log(' match not found')
+                              sel[i].innerText = 'wrong'
+                              document.getElementById(country).style.color = "red"
+                        }
+                  }
+
+                  // else{
+
+                  // console.log( 'option not selected')
+                  // }
+
+
+
+            }
+      }
 }
