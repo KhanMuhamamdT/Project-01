@@ -1,6 +1,7 @@
 h1 {
 
-color: gray;
+color: blue;
+font-stretch: wider;
 
 
 
@@ -34,7 +35,7 @@ Radio {
 div {
 
    
-color:gray;
+color:black;
 display: inline;
 font-size: 26px;
 align-content: center;
@@ -46,10 +47,10 @@ align-content: center;
 p{
 
     display:inline;
-    font-size: 26px;
+    font-size: 32px;
     font-style: oblique;
-    color: gray;
-    
+    color:black;
+    font-style: bold;
     
 }
 
@@ -87,4 +88,13 @@ div{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+
+
+  body {
+
+background-image: url("../pic.jpg");
+
+
+
   }

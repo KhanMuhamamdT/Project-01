@@ -2,7 +2,7 @@ console.log('script is live')
 
 // Preparing the dataset 
 
-var capital_quiz = [
+var capitalQuiz = [
 
       {
             "country_id": "Germany",
@@ -79,27 +79,27 @@ var capital_quiz = [
 
 
 
-var newdiv
-var newcontent
-var element
-var radio
-var div_lbl
-var div_txt
-var radioname
-var input_value
-var option
+let newDiv
+let newContent
+let element
+let radio
+let divLabel
+let divText
+let radioName
+let inputValue
+let option
 
-function brek_line(element) {
+function breakLine(element) {
       var brk
       br = document.createElement("br")
       element.appendChild(br)
 }
 
-function create_optionbutton(radioname) {
+function createOptionButton(radioName) {
 
       radio_btn = document.createElement("INPUT")
       radio_btn.setAttribute("type", "radio")
-      radio_btn.setAttribute("name", radioname)
+      radio_btn.setAttribute("name", radioName)
       radio_btn.setAttribute("city", "1111111111")
       radio_btn.setAttribute("Class", "rad")
       
@@ -107,61 +107,71 @@ function create_optionbutton(radioname) {
 
 }
 
-
-
-function create_divlbl(element, option) {
-//      var lbl = document.createElement("LABEL")
-//     var  lbltxt = document.createTextNode(option)
-//        element.appendChild(lbltxt)
-      div_lbl = document.createElement("div")
-      div_txt = document.createTextNode(option)
-      div_lbl.appendChild(div_txt)
-      element.appendChild(div_lbl)
+function createDivLabel(element, option) {
+      divLabel = document.createElement("div")
+      divText = document.createTextNode(option)
+      divLabel.appendChild(divText)
+      element.appendChild(divLabel)
 
 
 
 }
 
 
-for (let i = 0; i < capital_quiz.length; ++i) {
+for (let i = 0; i < capitalQuiz.length; ++i) {
       element = document.getElementById("content")
-      brek_line(element)
+      breakLine(element)
 
-      radioname = capital_quiz[i].country_id
+      radioName = capitalQuiz[i].country_id
       //  Question 
-      newdiv = document.createElement("p")
-      newdiv.setAttribute("align-content","center")
-      newcontent = document.createTextNode('What is the captal of ' + capital_quiz[i].country_id + '?')
+      newDiv = document.createElement("p")
+      newDiv.setAttribute("align-content","center")
+      newcontent = document.createTextNode('What is the captal of ' + capitalQuiz[i].country_id + '?')
       
-      newdiv.appendChild(newcontent)
-      element.appendChild(newdiv)
+      newDiv.appendChild(newcontent)
+      element.appendChild(newDiv)
       
 
       //option 1
-      brek_line(element)
-      create_optionbutton(radioname)
-      create_divlbl(element, capital_quiz[i].option1)
+      breakLine(element)
+      createOptionButton(radioName)
+      createDivLabel(element, capitalQuiz[i].option1)
 
 
       //  Option 2
-      brek_line(element)
-      create_optionbutton(radioname)
-      create_divlbl(element, capital_quiz[i].option2)
+      breakLine(element)
+      createOptionButton(radioName)
+      createDivLabel(element, capitalQuiz[i].option2)
 
       // option 3    
 
-      brek_line(element)
-      create_optionbutton(radioname)
-      create_divlbl(element, capital_quiz[i].option3)
+      breakLine(element)
+      createOptionButton(radioName)
+      createDivLabel(element, capitalQuiz[i].option3)
 
       //option 4
-      brek_line(element)
-      create_optionbutton(radioname)
-      create_divlbl(element, capital_quiz[i].option4)
-      brek_line(element)
+      breakLine(element)
+      createOptionButton(radioName)
+      createDivLabel(element, capitalQuiz[i].option4)
+      breakLine(element)
 
 }
 console.log(radio_btn)
 
 
 
+
+let buttonClick = document.getElementById("button")
+
+
+
+
+buttonClick.addEventListener('click', calculateResult)
+
+function calculateResult ()
+
+{
+
+console.log ("Result live ")
+
+}
