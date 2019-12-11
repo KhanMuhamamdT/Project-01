@@ -1,5 +1,20 @@
 console.log('script is live')
 
+
+var disp = document.getElementById("button")
+  
+disp.style.display="none"
+
+// if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+// </script>
+
+
+
 // Preparing the dataset 
 
 var capitalQuiz = [
@@ -10,7 +25,7 @@ var capitalQuiz = [
             "option2": "Frankfurt",
             "option3": "Berlin",
             "option4": "Stuttgart",
-            "match": "Berlin",
+            "match": "Stuttgart",
       },
 
       {
@@ -90,6 +105,8 @@ let inputValue
 let option
 let optionCity
 
+
+
 function breakLine(element) {
       var brk
       br = document.createElement("br")
@@ -120,7 +137,19 @@ function createDivLabel(element, option) {
 }
 
 
-for (let i = 0; i < capitalQuiz.length; ++i) {
+function createQuestions(){
+ // showing the button for the results 
+      disp.style.display="block"
+
+ // getting the value  of drop down
+      let a = document.getElementById("select");
+      let b = a.options[a.selectedIndex].text;
+ 
+ let loopMaxCount = b
+
+ 
+
+for (let i = 0; i < loopMaxCount; ++i) {
       element = document.getElementById("content")
       breakLine(element)
 
@@ -161,40 +190,41 @@ for (let i = 0; i < capitalQuiz.length; ++i) {
       breakLine(element)
 
 }
-//console.log(radio_btn)
+}
 
 
 
+let buttonStart = document.getElementById("buttonStart")
+buttonStart.addEventListener('click', createQuestions)
 
 let buttonClick = document.getElementById("button")
-
-
-
 
 buttonClick.addEventListener('click', calculateResult)
 
 function calculateResult() {
 
-
-      for (let i = 0; i < capitalQuiz.length; ++i) {
+      var correctSelection =0
+      for (let i = 0; i < loopMaxCount; ++i) {
+           
             console.log('Loop Iteration ')
             let sel = document.getElementsByName(capitalQuiz[i].country_id)
             console.log(sel)
             let selinput = capitalQuiz[i].match
             let country = capitalQuiz[i].country_id + 'p'
 
+            let noAnswer = false
+
             for (let i = 0; i < 4; i++) {
 
 
 
                   if (sel[i].checked) {
-
+                        noAnswer = true
 
                         let selmatch = sel[i].getAttribute("city")
-                        console.log('MK ' + selmatch)
-
                         if (selinput == selmatch) {
-                              console.log('match found')
+                              correctSelection = correctSelection + 1
+                              console.log(correctSelection)
                               document.getElementById(country).style.color = "green"
                         }
                         else {
@@ -208,9 +238,27 @@ function calculateResult() {
 
                   // console.log( 'option not selected')
                   // }
-
-
+            }
+            if (noAnswer == false) {
+                  document.getElementById(country).style.color = "yellow"
 
             }
+
+
       }
+     
+     if (correctSelection >= 7){
+      let prompt =  ' Successful \n' + " Correct Answers :: " + correctSelection + " Out of 10 Questions"
+      alert ( prompt,'Successful'   )}
+      else
+{
+      let prompt = ' Try Again \n' + " Correct Answers :: " + correctSelection + " Out of 10 Questions"
+      alert ( prompt   )}
+
+
 }
+
+
+
+
+       

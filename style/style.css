@@ -11,7 +11,27 @@ button {
 
     height:50px ;
     width: 100px;
+
+
 }
+
+select{
+    height:50px ;
+    width: 100px;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    
+    border: block style 12;
+   
+}
+
+
+
+.button:hover ,select:hover,p:hover{
+    background-color:gray;
+    color:blue; }
+
 
 .container {
 
@@ -35,7 +55,7 @@ Radio {
 div {
 
    
-color:black;
+color:blue;
 display: inline;
 font-size: 26px;
 align-content: center;
@@ -49,7 +69,7 @@ p{
     display:inline;
     font-size: 32px;
     font-style: oblique;
-    color:black;
+    color:white;
     font-style: bold;
     
 }
