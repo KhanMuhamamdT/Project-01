@@ -140,14 +140,12 @@ function createDivLabel(element, option) {
 function createQuestions(){
  // showing the button for the results 
       disp.style.display="block"
+// getting the value  of drop down
+let a = document.getElementById("select");
+let b = a.options[a.selectedIndex].text;
+var loopMaxCount = b
+console.log('lkkkkkk'+ loopMaxCount)
 
- // getting the value  of drop down
-      let a = document.getElementById("select");
-      let b = a.options[a.selectedIndex].text;
- 
- let loopMaxCount = b
-
- 
 
 for (let i = 0; i < loopMaxCount; ++i) {
       element = document.getElementById("content")
@@ -194,8 +192,11 @@ for (let i = 0; i < loopMaxCount; ++i) {
 
 
 
+
 let buttonStart = document.getElementById("buttonStart")
 buttonStart.addEventListener('click', createQuestions)
+
+
 
 let buttonClick = document.getElementById("button")
 
