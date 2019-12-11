@@ -1,9 +1,18 @@
 h1 {
 
-color: blue;
-font-stretch: wider;
+
+    color:blue;
+    text-shadow: 12px 12px 15px blue;
+  font-size: 56px;
+    
 
 
+}
+
+.blurText{
+
+    text-shadow: 12px 12px 15px blue;
+    font-size: 32px;
 
 }
 
@@ -113,8 +122,10 @@ div{
 
   body {
 
-background-image: url("../pic.jpg");
 
+    background-image: url("../pic.jpg");
 
 
   }
+
+  

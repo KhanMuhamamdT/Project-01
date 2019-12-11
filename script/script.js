@@ -7,6 +7,9 @@ disp.style.display = "none"
 var reset = document.getElementById("resetbutton")
 reset.style.display = "none"
 
+var answer = document.getElementById("answerkey")
+answer.style.display = "none"
+
 
 
 
@@ -184,6 +187,7 @@ function createQuestions() {
       // showing the button for the results 
       disp.style.display = "block"
       reset.style.display = "block"
+      answer.style.display ="block"
       // getting the value  of drop down
       let a = document.getElementById("select");
       let b = a.options[a.selectedIndex].text;
@@ -237,6 +241,8 @@ function createQuestions() {
 
 
 
+  answer.addEventListener('click', answerList)
+
 let resetbutton = document.getElementById("resetbutton")
 resetbutton.addEventListener('click', resetpage)
 
@@ -248,6 +254,27 @@ buttonStart.addEventListener('click', createQuestions)
 
 let buttonClick = document.getElementById("button")
 buttonClick.addEventListener('click', calculateResult)
+
+ 
+
+function  answerList() {
+      let st=""
+      let res1=""
+for (let ans = 0 ;ans< loopMaxCount ;ans++){
+      str = capitalQuiz[ans].country_id  +  " :: " +  capitalQuiz[ans].match + "\n"
+       res1 = res1 + str
+       
+}  
+alert(res1)
+
+
+
+}
+
+
+
+
+
 
 function resetpage() {
 
