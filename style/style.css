@@ -1,111 +1,61 @@
 h1 {
-
-
     color:blue;
     text-shadow: 12px 12px 15px blue;
-  font-size: 56px;
-    
-
-
-}
-
-.blurText{
-
+    font-size: 56px;
+}    
+.blurText {
     text-shadow: 12px 12px 15px blue;
     font-size: 32px;
-
 }
-
 button {
-
     height:50px ;
     width: 100px;
-
-
 }
-
-select{
+select {
     height:50px ;
     width: 100px;
     font-size: 20px;
     background-color: blue;
     color: white;
-    
     border: block style 12;
-   
 }
-
-
-
-.button:hover ,select:hover,p:hover{
+.button:hover ,select:hover,p:hover {
     background-color:gray;
-    color:blue; }
-
-
+    color:blue; 
+}
 .container {
-
     display: grid;
-
-
-
-
 }
-
-LABEL{
-
-color:gray;
-
+LABEL {
+    color:gray;
 }
-Radio {
-
+.Radio {
     border-style: solid;
 }
 
 div {
-
-   
-color:blue;
-display: inline;
-font-size: 26px;
-align-content: center;
-
-
+    color:blue;
+    display: inline;
+    font-size: 26px;
+    align-content: center;
 }
-
-
-p{
-
+p {
     display:inline;
     font-size: 32px;
     font-style: oblique;
     color:white;
-    font-style: bold;
-    
+    font-style: bold; 
 }
-
 radio {
-
-
     display:inline;
     align-content: center;
 }
-
-
-
-
 .content {
-
-text-align: right;
-
+    text-align: right;
 }
-
-div{
-
-
+div {
     border-style: black;
 }
-
-
 .button {
     background-color:blue;
     border: 11;
@@ -117,15 +67,12 @@ div{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-
-
-  body {
-
-
+}
+body {
     background-image: url("../pic.jpg");
-
-
+}
+h1,h2 {
+    text-align: center;
   }
 
   
