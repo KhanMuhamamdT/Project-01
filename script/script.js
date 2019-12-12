@@ -1,6 +1,6 @@
 console.log('script is live')
 
-
+var redDiv = "resultsDiv"
 var disp = document.getElementById("button")
 disp.style.display = "none"
 
@@ -10,7 +10,8 @@ reset.style.display = "none"
 var answer = document.getElementById("answerkey")
 answer.style.display = "none"
 
-
+ 
+// redDiv.style.display = "none"
 
 
 // if (x.style.display === "none") {
@@ -194,9 +195,12 @@ function createQuestions() {
       loopMaxCount = b
       console.log('lkkkkkk' + loopMaxCount)
 
-
+      document.getElementById("content").innerHTML = ""
       for (let i = 0; i < loopMaxCount; ++i) {
+          
             element = document.getElementById("content")
+            
+            
             breakLine(element)
 
             radioName = capitalQuiz[i].country_id
@@ -261,12 +265,15 @@ function  answerList() {
       let st=""
       let res1=""
 for (let ans = 0 ;ans< loopMaxCount ;ans++){
-      str = capitalQuiz[ans].country_id  +  " :: " +  capitalQuiz[ans].match + "\n"
+      str = capitalQuiz[ans].country_id  +  " :: " +  capitalQuiz[ans].match + "<br>"
        res1 = res1 + str
        
 }  
-alert(res1)
+//alert(res1)
 
+document.getElementById(redDiv).innerHTML = res1
+document.getElementById(redDiv).style.color ="blue"
+//document.getElementById(redDiv).style.fontSize = "24px"
 
 
 }
@@ -331,17 +338,23 @@ function calculateResult() {
 
 
       var score = (correctSelection / loopMaxCount) * 100
-
+      
+      
       if (score >= 70) {
-            let prompt = ' Successful \n' + " Score :: " + correctSelection
-            alert(prompt)
+            let prompt = ' Successful \n' + " Score :: " + correctSelection + " Out of " + loopMaxCount  + " Percentage = " + score +"%"
+           // alert(prompt)
+            document.getElementById(redDiv).innerHTML = prompt
+            document.getElementById(redDiv).style.color ="green"
       }
       else {
-            let prompt = ' Try Again \n' + " Score :: " + correctSelection
-            alert(prompt)
+            let prompt = ' Try Again \n' + " Score :: " + correctSelection + " Out of " + loopMaxCount  + " Percentage = " + score +"%"
+       //     alert(prompt)
+            document.getElementById(redDiv).innerHTML = prompt
+            document.getElementById(redDiv).style.color ="red"
 
       }
-      console(prompt)
+
+     // console(prompt)
 
 }
 
