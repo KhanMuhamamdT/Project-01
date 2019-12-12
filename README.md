@@ -20,4 +20,14 @@
         * Answer Key button
             * will dispaly the answer key in the alert message 
         *  Reset Button 
-            * will load the load the we application again.       
+            * will load the load the we application again.     
+##   Technical Design
+      * List of Functions
+        * createOptionButton( arg1,arg2)
+          * accept two arguments Radio button and city name
+        * createDivLabel (arg1,arg2)
+          * accept element and option
+        *  createQuestions()
+          * create the list of question based on the JSON object
+        * calculateResult()
+          * Calculate the results
