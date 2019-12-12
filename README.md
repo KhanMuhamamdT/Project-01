@@ -1,6 +1,8 @@
 ##  Trivia Capital Cities Webapplication V-1 
 ##  Web Application URL 
      * https://khanmuhamamdt.github.io/Project-01/
+##  Layout
+    ![ Landing Screen] (Application.jpg)
 ##  Scope.
      * Web aplication is designed to test the knowledge of capital cities around the world.
      * Version -1 has set of pre defined questions 
@@ -31,3 +33,5 @@
           * create the list of question based on the JSON object
         * calculateResult()
           * Calculate the results
+          
+ 
