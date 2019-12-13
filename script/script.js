@@ -120,9 +120,9 @@ function createDivLabel(element, option) {
 }
 function createQuestions() {
       // showing the button for the results 
-      disp.style.display = "block"
-      reset.style.display = "block"
-      answer.style.display ="block"
+      disp.style.display = "inline-block"
+      reset.style.display = "inline-block"
+      answer.style.display ="inline-block"
       // getting the value  of drop down
       let a = document.getElementById("select");
       let b = a.options[a.selectedIndex].text;
