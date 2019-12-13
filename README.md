@@ -1,8 +1,9 @@
+![fish-logo](./Application.jpg)
 ##  Trivia Capital Cities Webapplication V-1 
 ##  Web Application URL 
      * https://khanmuhamamdt.github.io/Project-01/
 ##  Layout
-     ![fish-logo](./Application.jpg)
+    
     - Like this: 
        
 ##  Scope.
