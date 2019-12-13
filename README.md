@@ -1,12 +1,9 @@
-![fish-logo](./Application.jpg)
 ##  Trivia Capital Cities Webapplication V-1 
 ##  Web Application URL 
      * https://khanmuhamamdt.github.io/Project-01/
 ##  Layout
-    
-    - Like this: 
-       
-##  Scope.
+![fish-logo](./Application.jpg)
+ #  Scope.
      * Web aplication is designed to test the knowledge of capital cities around the world.
      * Version -1 has set of pre defined questions 
      * Dynamic functionality will be added in the second version either by API call or fetching the questions from the database
