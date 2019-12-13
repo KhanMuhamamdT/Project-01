@@ -3,11 +3,7 @@
      * https://khanmuhamamdt.github.io/Project-01/
 ##  Layout
 ![fish-logo](./Application.jpg)
-<<<<<<< HEAD
 ##  Scope.
-=======
- #  Scope.
->>>>>>> 95c7da88c0e086f7e1056db12fdcb357e9633348
      * Web aplication is designed to test the knowledge of capital cities around the world.
      * Version -1 has set of pre defined questions 
      * Dynamic functionality will be added in the second version either by API call or fetching the questions from the database
