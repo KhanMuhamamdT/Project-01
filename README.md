@@ -11,9 +11,9 @@
 ## Work Breakdown Structure
 Day         |   TASK          |    Effort
 ------------| -------------  | -------------
-December 2nd| Analysis       |     2 hours
-            | Layout         |    1 hour
-            | Logic for question |  5 hour
+December 2nd| Analysis       |    2 hours
+December 2nd| Layout         |    1 hour
+December 2nd|Logic for question | 5 hour
             
 
 Content in the first column | Content in the second column | Content in the second column
