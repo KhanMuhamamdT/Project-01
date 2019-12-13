@@ -2,7 +2,9 @@
 ##  Web Application URL 
      * https://khanmuhamamdt.github.io/Project-01/
 ##  Layout
-    - Like this: ![fish-logo](./Application.jpg) 
+     ![fish-logo](./Application.jpg)
+    - Like this: 
+       
 ##  Scope.
      * Web aplication is designed to test the knowledge of capital cities around the world.
      * Version -1 has set of pre defined questions 
