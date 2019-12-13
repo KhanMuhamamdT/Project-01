@@ -7,8 +7,15 @@
      * Web aplication is designed to test the knowledge of capital cities around the world.
      * Version -1 has set of pre defined questions 
      * Dynamic functionality will be added in the second version either by API call or fetching the questions from the database
+## Work Breakdown Structure
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
 ## Languages 
-     * HTML,Java Script , CSS are used to implement the functionality.
+     * HTML,Java Script,CSS are used to implement the functionality.
 ##  Functionality . 
      * User will select the questions from the drop down list and then click on the Start Quizz button
      * Application will display the questiion based on the  drop down selection
