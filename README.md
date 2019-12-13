@@ -15,13 +15,19 @@ December 2nd| Analysis       |    2 hours
 December 2nd| Layout         |    1 hour
 December 2nd|Logic to generate question | 5 hour
 December 3rd|Logic to calculate Answer | 4 hour
-December 3rd|Refactoring, Code Formatting | 4 hour
+December 3rd|DOM manipulation | 4 hour
 December 4th |Refactoring, Testing  | 4 hour
 December 4th | DOM Logic |  4 hours
 December 5th | Replacing Alert Messages|  3 hours
 December 5th | Refactoring|  3 hours
 December 5th | Documenation , Alignment| 3 hours
 December 6th | Documenation , Alignment| 4 hours
+## Challenges
+ Sr.No          |   TASK         
+------------| -------------  
+  1   | DOM Maniulation       
+  2 |  Alignment Issue     
+  3 |  Commit Issues
 ## Languages 
      * HTML,Java Script,CSS are used to implement the functionality.
 ##  Functionality . 
